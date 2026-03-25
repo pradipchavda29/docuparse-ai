@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuParse AI - Intelligent Document Reader</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>DocuParse AI</h1>
+            <p>Intelligent Multi-Document Extraction</p>
+        </header>
+
+        <main>
+            <section class="upload-section glass-panel">
+                <form id="uploadForm">
+                    <div class="input-group">
+                        <label for="userName">Your Name</label>
+                        <input type="text" id="userName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Upload Documents (PDF only)</label>
+                        <div class="file-drop-area" id="dropArea">
+                            <span class="drop-icon">📄</span>
+                            <span class="drop-msg">Drag & Drop PDFs here or click to browse</span>
+                            <input type="file" id="fileInput" name="files" accept=".pdf" multiple required>
+                        </div>
+                        <div id="fileList" class="file-list"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Submit for Processing <span class="arrow">→</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Processing Loader -->
+            <section id="loaderSection" class="loader-section hidden glass-panel">
+                <div class="loader-content">
+                    <div class="spinner"></div>
+                    <div class="loader-text">
+                        <h3 id="loaderTitle">Processing Documents...</h3>
+                        <p id="loaderInfo">Parsing document <span id="currentDocNum">0</span> of <span id="totalDocNum">0</span></p>
+                        <p id="loaderFilename" class="filename-text"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <div class="results-header">
+                    <h2>Extraction Results for <span id="resultUserName"></span></h2>
+                </div>
+                <!-- Add margin bottom so scrolling has space -->
+                <div class="table-container glass-panel" style="margin-bottom: 4rem;">
+                    <table id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Document Name</th>
+                                <th>Document ID</th>
+                                <th>Issue Date</th>
+                                <th>Expiry Date</th>
+                                <th>Issuing Authority</th>
+                                <th>Place</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody">
+                            <!-- Rows will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
