@@ -68,13 +68,11 @@ DocuParse AI is a premium, lightweight web application designed to effortlessly 
 
 ## 📸 Screenshots
 
-*(Replace this section with screenshots of your running application before publishing)*
-
 **1. Upload Interface**
-![Upload Interface](path/to/upload-screenshot.png)
+![Upload Interface](images/upload-screenshot.png)
 
 **2. Extraction Results**
-![Results Table](path/to/results-screenshot.png)
+![Results Table](images/results-screenshot.png)
 
 ## 🤝 Contributing
 
