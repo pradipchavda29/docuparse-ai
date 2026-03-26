@@ -13,8 +13,10 @@ DocuParse AI is a premium, lightweight web application designed to effortlessly 
 
 - **Intelligent Extraction:** Handles completely different document layouts and structures natively without predefined rules or brittle OCR coordinates.
 - **Batch Processing UI:** Drag and drop multiple PDFs at once. The system queues and processes them one-by-one with a live progress indicator.
-- **Structured Outputs:** Automatically pulls `Document Name`, `Document ID`, `Issue Date`, `Expiry Date`, `Issuing Authority`, and `Location`. 
-- **Smart Fallbacks:** Identifies when essential data is missing from a document and clearly flags it as *Manual Verification Needed*.
+- **Dynamic AI Parsing:** Unconstrained structured outputs! The system autonomously determines the document classification and extracts highly relevant, document-specific fields on the fly rather than relying on a rigid schema.
+- **Card Accordion UI:** A responsive, toggleable grid layout built to elegantly display completely varying document structures simultaneously without cluttering the screen.
+- **CSV Reporting:** One-click bulk export that intelligently maps all newly discovered AI fields across the batch into a perfectly merged spreadsheet.
+- **Smart Fallbacks:** Identifies when essential data is completely missing and clearly flags it for *Manual Verification*.
 - **Premium UI/UX:** Built with a modern, glassmorphism aesthetic using responsive Vanilla CSS and JS.
 - **Document Previews:** Hosted local previews for rapid manual verification of uploaded PDFs.
 
