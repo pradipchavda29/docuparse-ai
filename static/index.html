@@ -6,7 +6,7 @@
     <title>DocuParse AI - Intelligent Document Reader</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/styles.css?v=3">
 </head>
 <body>
     <div class="background-elements">
@@ -58,20 +58,19 @@
 
             <!-- Results Section -->
             <section id="resultsSection" class="results-section hidden">
-                <div class="results-header">
+                <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                     <h2>Extraction Results for <span id="resultUserName"></span></h2>
+                    <!-- Export Button (hidden initially) -->
+                    <button id="exportCsvBtn" class="export-btn hidden">⬇ Export to CSV</button>
                 </div>
                 <!-- Add margin bottom so scrolling has space -->
                 <div class="table-container glass-panel" style="margin-bottom: 4rem;">
                     <table id="resultsTable">
-                        <thead>
+                        <thead id="resultsHead">
                             <tr>
+                                <th style="width: 50px;"></th>
                                 <th>Document Name</th>
-                                <th>Document ID</th>
-                                <th>Issue Date</th>
-                                <th>Expiry Date</th>
-                                <th>Issuing Authority</th>
-                                <th>Place</th>
+                                <th>Document Type</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -84,6 +83,6 @@
         </main>
     </div>
 
-    <script src="/static/script.js"></script>
+    <script src="/static/script.js?v=3"></script>
 </body>
 </html>
